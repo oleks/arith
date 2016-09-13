@@ -1,0 +1,73 @@
+\begin{frame}
+
+\vspace{\fill}
+
+\begin{center}
+
+\LARGE \textbf{Addition}
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{\centerline{1-bit Addition}}
+
+\begin{center}
+
+\begin{tabular}{cc|cc}
+$A$ & $B$ & Carry & Result \\\hline
+\bz{} & \bz{} & \bz{} & \bz{} \\
+\bz{} & \bo{} & \bz{} & \bo{} \\
+\bo{} & \bz{} & \bo{} & \bz{} \\
+\bo{} & \bo{} & \bo{} & \bo{}
+\end{tabular}
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{\centerline{$n$-bit Addition: First Attempt}}
+
+\begin{center}
+
+We have $X=x_{n-1}x_{n-2}\cdots x_0$ and $Y=y_{n-1}y_{n-2}\cdots y_0$.
+
+\pause
+
+\bigskip
+
+$X\mathtt{+}Y$ evaluates to $Z=z_{n-1}z_{n-2}\cdots z_0$, and \\
+
+a carry- (overflow) bit $c_n$, where \\
+
+\pause
+
+\vspace{\fill}
+
+\begin{tabular}{ccc|cc}
+$x_i$ & $y_i$ & $c_i$ & $c_{i+1}$ & $z_i$ \\\hline
+\bz{} & \bz{} & \bz{} & \bz{} & \bz{} \\
+\bz{} & \bz{} & \bo{} & \bz{} & \bo{} \\
+\bz{} & \bo{} & \bz{} & \bz{} & \bo{} \\
+\bz{} & \bo{} & \bo{} & \bo{} & \bz{} \\
+\bo{} & \bz{} & \bz{} & \bz{} & \bo{} \\
+\bo{} & \bz{} & \bo{} & \bo{} & \bz{} \\
+\bo{} & \bo{} & \bz{} & \bo{} & \bz{} \\
+\bo{} & \bo{} & \bo{} & \bo{} & \bo{}
+\end{tabular}
+
+\vspace{\fill}
+
+and $c_0=0$.
+
+\end{center}
+
+\end{frame}
