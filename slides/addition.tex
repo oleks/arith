@@ -34,21 +34,37 @@ $A$ & $B$ & Carry & Result \\\hline
 
 \begin{frame}
 
-\frametitle{\centerline{$n$-bit Addition: First Attempt}}
+\frametitle{\centerline{$n$-bit Addition}}
 
 \begin{center}
 
-We have $X=x_{n-1}x_{n-2}\cdots x_0$ and $Y=y_{n-1}y_{n-2}\cdots y_0$.
+Given the bit-strings $x_{n-1}x_{n-2}\cdots x_0$ and $y_{n-1}y_{n-2}\cdots y_0$.
 
 \pause
 
 \bigskip
 
-$X\mathtt{+}Y$ evaluates to $Z=z_{n-1}z_{n-2}\cdots z_0$, and \\
-
-a carry- (overflow) bit $c_n$, where \\
+Show how to produce a bit-string $z_{n-1}z_{n-2}\cdots z_0$, \\ and a carry-
+(overflow) bit $c_n$, such that
 
 \pause
+
+\bigskip
+
+$$\sum_0^{n-1}z_i2^i + c_n= \sum_0^{n-1}x_i2^i + \sum_0^{n-1}y_i2^i$$
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{\centerline{Carry-Ripple Addition}}
+
+\begin{center}
+
+Let $c_0=0$, and let $z_i$ be given by the following truth table:
 
 \vspace{\fill}
 
@@ -65,8 +81,6 @@ $x_i$ & $y_i$ & $c_i$ & $c_{i+1}$ & $z_i$ \\\hline
 \end{tabular}
 
 \vspace{\fill}
-
-and $c_0=0$.
 
 \end{center}
 
