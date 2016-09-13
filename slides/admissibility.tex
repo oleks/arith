@@ -45,13 +45,13 @@ $A$ & $B$ & $A \oplus B$ \\\hline
 \bo{} & \bo{} & \bz{}
 \end{tabular}
 
-\vspace{\fill}
-
+\begin{minipage}[t][0.9in]{\textwidth}
 \begin{align*}
 A \oplus B %
 &\equiv \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}} & \text{(read \texttt{1}s)}\\
 &\equiv \overline{\p{\overline{A} \cdot \overline{B}} + \p{A \cdot B}} & \text{(read \texttt{0}s)}
 \end{align*}
+\end{minipage}
 
 ``$A$ or $B$, but not both $A$ and $B$''
 
@@ -78,14 +78,14 @@ $A$ & $B$ & $A \uparrow B$ \\\hline
 \bo{} & \bo{} & \bz{}
 \end{tabular}
 
-\vspace{\fill}
-
+\begin{minipage}[t][0.9in]{\textwidth}
 \begin{align*}
 A \uparrow B %
 &\equiv \p{\overline{A} \cdot \overline{B}} + \p{A \cdot \overline{B}} + \p{\overline{A} \cdot B} %
 & \text{(read \texttt{1}s)}\\
 &\equiv \overline{\p{A\cdot B}} & \text{(read \texttt{0}s)}
 \end{align*}
+\end{minipage}
 
 ``not both $A$ and $B$''
 
@@ -111,14 +111,14 @@ $A$ & $B$ & $A \downarrow B$ \\\hline
 \bo{} & \bo{} & \bz{}
 \end{tabular}
 
-\vspace{\fill}
-
+\begin{minipage}[t][0.9in]{\textwidth}
 \begin{align*}
 A \downarrow B %
 &\equiv \p{\overline{A} \cdot \overline{B}} & \text{(read \texttt{1}s)}\\
 &\equiv \overline{\p{A \cdot \overline{B}} + \p{\overline{A} \cdot B} + \p{A \cdot B}}%
 & \text{(read \texttt{0}s)}
 \end{align*}
+\end{minipage}
 
 ``neither $A$ nor $B$''
 
