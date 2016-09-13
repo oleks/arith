@@ -20,12 +20,101 @@ it does not contradict the laws of the algebra
 
 \vspace{\fill}
 
-\pause
-
-\textbf{Why?} No fancy new gates required.
-
 \end{center}
 
 \vspace{\fill}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{XOR is admissible}
+
+\begin{flushright}
+--- Proof by reading the truth table.
+\end{flushright}
+
+\vspace{\fill}
+
+\begin{center}
+
+\begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}}
+$A$ & $B$ & $A \oplus B$ \\\hline
+\bz{} & \bz{} & \bz{} \\
+\bz{} & \bo{} & \bo{} \\
+\bo{} & \bz{} & \bo{} \\
+\bo{} & \bo{} & \bz{}
+\end{tabular}
+
+\vspace{\fill}
+
+$A \oplus B \equiv \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}}$
+
+\vspace{\fill}
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{NAND is admissible}
+
+\begin{flushright}
+--- Proof by reading the truth table.
+\end{flushright}
+
+\vspace{\fill}
+
+\begin{center}
+
+\begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}}
+$A$ & $B$ & $A \uparrow B$ \\\hline
+\bz{} & \bz{} & \bo{} \\
+\bz{} & \bo{} & \bo{} \\
+\bo{} & \bz{} & \bo{} \\
+\bo{} & \bo{} & \bz{}
+\end{tabular}
+
+\vspace{\fill}
+
+$A \uparrow B \equiv \p{\overline{A} \cdot \overline{B}} + \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}}$
+
+\vspace{\fill}
+
+\end{center}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{NOR is admissible}
+
+\begin{flushright}
+--- Proof by reading the truth table.
+\end{flushright}
+
+\vspace{\fill}
+
+\begin{center}
+
+\begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}}
+$A$ & $B$ & $A \downarrow B$ \\\hline
+\bz{} & \bz{} & \bo{} \\
+\bz{} & \bo{} & \bz{} \\
+\bo{} & \bz{} & \bz{} \\
+\bo{} & \bo{} & \bz{}
+\end{tabular}
+
+\vspace{\fill}
+
+$A \downarrow B \equiv \p{\overline{A} \cdot \overline{B}}$
+
+\vspace{\fill}
+
+\end{center}
 
 \end{frame}
