@@ -1,0 +1,36 @@
+\documentclass[xcolor=table]{beamer}
+
+\input{header}
+
+\usepackage{circuitikz}
+
+\setbeamerfont{title}{size=\LARGE}
+
+\addtobeamertemplate{title page}{%
+  \begin{textblock}{20}(11.5,-0.5)%
+    \includegraphics[height=1in]{figures/white-logo}%
+  \end{textblock}%
+}
+
+\title{Digital Arithmetic}
+\subtitle{Computer Systems 2016}
+\institute{DIKU}
+\author{Oleks}
+\date{September 14, 2016}
+
+\begin{document}
+
+\newcommand{\bz}{\texttt{0}}
+\newcommand{\bo}{\texttt{1}}
+
+\renewcommand*{\arraystretch}{1.2}
+
+\begin{frame} \titlepage \end{frame}
+
+\input{zero-one}
+
+\input{basics}
+
+\input{functional-completeness}
+
+\end{document}
