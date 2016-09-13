@@ -116,5 +116,8 @@
 
 \NewDocumentCommand\set{m}{%
   \mathWrap{\{\mathrel{}}{#1\mathrel{}}{\}}%
-  % \mathrel adds some extra math-like spacing
+}
+
+\NewDocumentCommand\p{m}{%
+  \mathWrap{(\mathrel{}}{#1\mathrel{}}{)}%
 }
