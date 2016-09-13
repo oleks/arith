@@ -1,5 +1,55 @@
 \begin{frame}
 
+\frametitle{\centerline{Truth Tables}}
+
+\vspace{\fill}
+
+\begin{center}
+
+\textbf{NOT} \\
+\medskip
+\begin{tabular}{c|c}
+$A$ & $\overline{A}$ \\\hline
+\bz{} & \bo{} \\
+\bo{} & \bz{} \\
+\end{tabular}
+
+\bigskip
+
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{AND} \\
+\medskip
+\begin{tabular}{cc|c}
+$A$ & $B$ & $A \cdot B$ \\\hline
+\bz{} & \bz{} & \bz{} \\
+\bz{} & \bo{} & \bz{} \\
+\bo{} & \bz{} & \bz{} \\
+\bo{} & \bo{} & \bo{}
+\end{tabular}
+\end{minipage}%
+\begin{minipage}{0.3\textwidth}
+\centering
+\textbf{OR} \\
+\medskip
+\begin{tabular}{cc|c}
+$A$ & $B$ & $A + B$ \\\hline
+\bz{} & \bz{} & \bz{} \\
+\bz{} & \bo{} & \bo{} \\
+\bo{} & \bz{} & \bo{} \\
+\bo{} & \bo{} & \bo{}
+\end{tabular}
+\end{minipage}
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
+
+
+\begin{frame}
+
 \frametitle{\centerline{Gates}}
 
 \begin{center}
@@ -26,44 +76,6 @@
 \medskip
 \begin{circuitikz} \draw[color=fgcolor]
 (0,2) node[or port] {};
-\end{circuitikz}
-\end{minipage}
-
-\end{center}
-
-\vspace{\fill}
-
-\end{frame}
-
-
-\begin{frame}
-
-\frametitle{\centerline{More Gates}}
-
-\begin{center}
-
-\begin{minipage}{0.25\textwidth}
-\centering
-\textbf{XOR} \\
-\medskip
-\begin{circuitikz} \draw[color=fgcolor]
-(0,2) node[xor port] {};
-\end{circuitikz}
-\end{minipage}%
-\begin{minipage}{0.25\textwidth}
-\centering
-\textbf{NAND} \\
-\medskip
-\begin{circuitikz} \draw[color=fgcolor]
-(0,2) node[nand port] {};
-\end{circuitikz}
-\end{minipage}%
-\begin{minipage}{0.25\textwidth}
-\centering
-\textbf{NOR} \\
-\medskip
-\begin{circuitikz} \draw[color=fgcolor]
-(0,2) node[nor port] {};
 \end{circuitikz}
 \end{minipage}
 
