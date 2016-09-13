@@ -35,8 +35,6 @@ it does not contradict the laws of the algebra
 --- Proof by reading the truth table.
 \end{flushright}
 
-\vspace{\fill}
-
 \begin{center}
 
 \begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}}
@@ -49,9 +47,13 @@ $A$ & $B$ & $A \oplus B$ \\\hline
 
 \vspace{\fill}
 
-$A \oplus B \equiv \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}}$
+\begin{align*}
+A \oplus B %
+&\equiv \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}} & \text{(read \texttt{1}s)}\\
+&\equiv \overline{\p{\overline{A} \cdot \overline{B}} + \p{A \cdot B}} & \text{(read \texttt{0}s)}
+\end{align*}
 
-\vspace{\fill}
+``$A$ or $B$, but not both $A$ and $B$''
 
 \end{center}
 
@@ -66,8 +68,6 @@ $A \oplus B \equiv \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}}$
 --- Proof by reading the truth table.
 \end{flushright}
 
-\vspace{\fill}
-
 \begin{center}
 
 \begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}}
@@ -80,14 +80,18 @@ $A$ & $B$ & $A \uparrow B$ \\\hline
 
 \vspace{\fill}
 
-$A \uparrow B \equiv \p{\overline{A} \cdot \overline{B}} + \p{\overline{A} \cdot B} + \p{A \cdot \overline{B}}$
+\begin{align*}
+A \uparrow B %
+&\equiv \p{\overline{A} \cdot \overline{B}} + \p{A \cdot \overline{B}} + \p{\overline{A} \cdot B} %
+& \text{(read \texttt{1}s)}\\
+&\equiv \overline{\p{A\cdot B}} & \text{(read \texttt{0}s)}
+\end{align*}
 
-\vspace{\fill}
+``not both $A$ and $B$''
 
 \end{center}
 
 \end{frame}
-
 
 \begin{frame}
 
@@ -96,8 +100,6 @@ $A \uparrow B \equiv \p{\overline{A} \cdot \overline{B}} + \p{\overline{A} \cdot
 \begin{flushright}
 --- Proof by reading the truth table.
 \end{flushright}
-
-\vspace{\fill}
 
 \begin{center}
 
@@ -111,9 +113,14 @@ $A$ & $B$ & $A \downarrow B$ \\\hline
 
 \vspace{\fill}
 
-$A \downarrow B \equiv \p{\overline{A} \cdot \overline{B}}$
+\begin{align*}
+A \downarrow B %
+&\equiv \p{\overline{A} \cdot \overline{B}} & \text{(read \texttt{1}s)}\\
+&\equiv \overline{\p{A \cdot \overline{B}} + \p{\overline{A} \cdot B} + \p{A \cdot B}}%
+& \text{(read \texttt{0}s)}
+\end{align*}
 
-\vspace{\fill}
+``neither $A$ nor $B$''
 
 \end{center}
 
