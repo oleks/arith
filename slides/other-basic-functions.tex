@@ -1,0 +1,92 @@
+\begin{frame}
+
+\vspace{\fill}
+
+\begin{center}
+
+$\set{\text{\textbf{AND}}, \text{\textbf{OR}}, \text{\textbf{NOT}}}$ \\
+
+\bigskip
+
+is not the \textbf{only} possible set of basic functions \\ for a boolean algebra.
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{AND is admissible in $\set{\text{\textbf{OR}}, \text{\textbf{NOT}}}$}
+
+\begin{minipage}[t][0.5in]{\textwidth}
+\begin{align*}
+A \cdot B %
+&\equiv \overline{\overline{A}+\overline{B}}
+\end{align*}
+\end{minipage}
+
+\begin{flushright}
+--- Proof \underline{by truth table}.
+\end{flushright}
+
+\vspace{\fill}
+
+\pause
+
+\begin{center}
+
+\begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}|c|c|>{\centering\arraybackslash}p{0.4in}|>{\centering\arraybackslash}p{0.4in}}
+$A$ & $B$ & $A \cdot B$ & $\overline{A}$ & $\overline{B}$ %
+  & $\overline{A} + \overline{B}$ %
+  & $\overline{\overline{A} + \overline{B}}$\\\hline
+\bz{} & \bz{} & \bz{} & \bo{} & \bo{} & \bo{} & \bz{} \\
+\bz{} & \bo{} & \bz{} & \bo{} & \bz{} & \bo{} & \bz{} \\
+\bo{} & \bz{} & \bz{} & \bz{} & \bo{} & \bo{} & \bz{} \\
+\bo{} & \bo{} & \bo{} & \bz{} & \bz{} & \bz{} & \bo{}
+\end{tabular}
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
+
+\begin{frame}
+
+\frametitle{OR is admissible in $\set{\text{\textbf{AND}}, \text{\textbf{NOT}}}$}
+
+\begin{minipage}[t][0.5in]{\textwidth}
+\begin{align*}
+A + B %
+&\equiv \overline{\overline{A}\cdot\overline{B}}
+\end{align*}
+\end{minipage}
+
+\begin{flushright}
+--- Proof \underline{by truth table}.
+\end{flushright}
+
+\pause
+
+\vspace{\fill}
+
+\begin{center}
+
+\begin{tabular}{cc|>{\centering\arraybackslash}p{0.4in}|c|c|>{\centering\arraybackslash}p{0.4in}|>{\centering\arraybackslash}p{0.4in}}
+$A$ & $B$ & $A + B$ & $\overline{A}$ & $\overline{B}$ %
+  & $\overline{A} \cdot \overline{B}$ %
+  & $\overline{\overline{A} \cdot \overline{B}}$\\\hline
+\bz{} & \bz{} & \bz{} & \bo{} & \bo{} & \bo{} & \bz{} \\
+\bz{} & \bo{} & \bo{} & \bo{} & \bz{} & \bz{} & \bo{} \\
+\bo{} & \bz{} & \bo{} & \bz{} & \bo{} & \bz{} & \bo{} \\
+\bo{} & \bo{} & \bo{} & \bz{} & \bz{} & \bz{} & \bo{}
+\end{tabular}
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
