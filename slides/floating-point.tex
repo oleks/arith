@@ -1,0 +1,79 @@
+\begin{frame}
+
+\vspace{\fill}
+
+\begin{center}
+
+\LARGE \textbf{Floating-Point Arithmetic}
+
+\end{center}
+
+\vspace{\fill}
+
+\end{frame}
+
+
+\begin{frame}
+
+\frametitle{\centerline{Floating-Point}}
+
+\begin{center}
+
+A floating-point value is a triplet $\p{s,f,e}$, \\ representing the
+mathematical value
+
+
+$$(-1)^s \cdot f \cdot \beta^e.$$
+
+(Typically, $\beta = 2$.)
+
+\end{center}
+
+\pause
+
+\vspace{\fill}
+
+Fitting this triplet onto the conventional digital quanta of \\ 8, 16, 32, 64,
+etc. bits presents a number of challenges:
+
+\begin{itemize}
+
+\item Should we prioritze $f$ (significand) or $e$ (exponent)?
+
+\item Can we have an arithmetic closed under basic operations?
+
+\item What about exceptional behaviour (e.g., divide by $0$)?
+
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}[fragile]
+
+\frametitle{\centerline{IEEE 754 Floating-Point}}
+
+For the functional programmer:
+
+\begin{lstlisting}[language=ml,numbers=none]
+type FP
+  = Normal    of Sign * Significand * Exponent
+  | Infinity  of Sign
+  | NaN       of Payload
+      // Payload carries the reason for the NaN.
+  | Zero      of Sign
+  | Subnormal of Sign * Significand
+      // Allows gradual underflow.
+\end{lstlisting}
+
+\vspace{\fill}
+
+\begin{itemize}
+
+\item Designed for portability (but doesn't always succeed).
+
+\item Closure is achieved through rounding (next slide).
+
+\end{itemize}
+
+\end{frame}

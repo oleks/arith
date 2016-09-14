@@ -87,6 +87,7 @@
 \setbeamercolor{normal text}{fg=fgcolor}
 \setbeamercolor{background canvas}{bg=bgcolor}
 \setbeamercolor{normal text}{fg=fgcolor}
+\setbeamercolor{itemize item}{fg=fgcolor}
 
 \setbeamercolor{bibliography item}{fg=fgcolor}
 \setbeamercolor{bibliography entry author}{fg=fgcolor}
@@ -118,6 +119,14 @@
   \mathWrap{\{\mathrel{}}{#1\mathrel{}}{\}}%
 }
 
+\NewDocumentCommand\floor{m}{%
+  \mathWrap{\lfloor\mathrel{}}{#1\mathrel{}}{\rfloor}%
+}
+
+\NewDocumentCommand\card{m}{%
+  \mathWrap{|\mathrel{}}{#1\mathrel{}}{|}%
+}
+
 \NewDocumentCommand\p{m}{%
-  \mathWrap{(\mathrel{}}{#1\mathrel{}}{)}%
+  \mathWrap{(}{#1}{)}%
 }
